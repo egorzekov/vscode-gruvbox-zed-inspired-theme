@@ -1,0 +1,11 @@
+[
+  {
+    "label": "Build + package extension",
+    "command": "pnpm package",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "tags": []
+  }
+]
