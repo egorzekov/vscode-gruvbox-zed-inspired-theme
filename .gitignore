@@ -4,7 +4,7 @@ node_modules/
 /themes/
 
 # Packaged extension
-*.vsix
+/dist/
 
 .DS_Store
 *.log

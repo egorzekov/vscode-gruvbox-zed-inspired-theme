@@ -9,4 +9,4 @@ pnpm-workspace.yaml
 .gitignore
 .vscodeignore
 **/*.map
-*.vsix
+dist/**

@@ -16,6 +16,7 @@ src/themes/zed-gruvbox-dark.ts  # workbench colors + token rules
 src/themes/index.ts             # registry of themes to emit
 src/build.ts                    # writes themes/*.json
 themes/                         # generated output (git-ignored)
+dist/                           # packaged .vsix (git-ignored)
 ```
 
 The build fails if `src/themes/index.ts` and `contributes.themes` in `package.json` disagree.
@@ -38,8 +39,8 @@ TextMate and semantic scopes under the cursor.
 ## Packaging
 
 ```sh
-pnpm package     # typechecks, builds, emits a .vsix
-code --install-extension vscode-gruvbox-zed-inspired-theme-0.0.1.vsix
+pnpm package     # typechecks, builds, emits dist/*.vsix
+code --install-extension dist/vscode-gruvbox-zed-inspired-theme-0.0.1.vsix
 ```
 
 > Requires Node 24+ — the build runs `.ts` files directly via Node's native type stripping.

@@ -35,8 +35,8 @@
     "build": "node src/build.ts",
     "typecheck": "tsc --noEmit",
     "prepackage": "pnpm run typecheck && pnpm run build",
-    "package": "vsce package --no-dependencies",
-    "clean": "rm -rf themes *.vsix"
+    "package": "mkdir -p dist && vsce package --no-dependencies --out dist/",
+    "clean": "rm -rf themes dist"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
