@@ -1,0 +1,46 @@
+{
+  "name": "vscode-gruvbox-zed-inspired-theme",
+  "displayName": "Zed Gruvbox",
+  "description": "Gruvbox for VS Code, inspired by the Zed editor's take on the palette.",
+  "version": "0.0.1",
+  "publisher": "egorzekov",
+  "license": "MIT",
+  "author": "Egor Zekov",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.15.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "gruvbox",
+    "zed",
+    "theme",
+    "dark",
+    "color-theme"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Zed Gruvbox Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/zed-gruvbox-dark.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node src/build.ts",
+    "typecheck": "tsc --noEmit",
+    "prepackage": "pnpm run typecheck && pnpm run build",
+    "package": "vsce package --no-dependencies",
+    "clean": "rm -rf themes *.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@vscode/vsce": "^3.2.1",
+    "typescript": "^5.7.2"
+  }
+}
