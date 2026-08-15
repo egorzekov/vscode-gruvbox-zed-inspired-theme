@@ -1,8 +1,14 @@
 # Zed Gruvbox
 
+<img src="assets/icon.png" width="128" height="128" alt="Zed Gruvbox icon">
+
 Gruvbox for VS Code, inspired by the [Zed](https://zed.dev) editor's take on the palette.
 
-Currently ships one theme: **Zed Gruvbox Dark** (placeholder values, work in progress).
+Big shoutout to the Zed designers for creating the best dark theme ever.
+
+Currently ships one theme: **Zed Gruvbox Dark**.
+
+![Zed Gruvbox Dark](assets/theme-example.png)
 
 ## How it works
 

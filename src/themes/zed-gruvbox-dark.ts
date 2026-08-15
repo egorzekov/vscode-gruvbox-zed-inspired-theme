@@ -22,12 +22,16 @@ export const zedGruvboxDark: ColorTheme = {
   semanticHighlighting: true,
 
   colors: {
-    // Base — Zed `text`, `text.muted`, `border`, `border.focused`
+    // Base — Zed `text`, `text.muted`, `border`
     foreground: p.text,
     descriptionForeground: p.textMuted,
     disabledForeground: p.textPlaceholder,
     errorForeground: p.deleted,
-    focusBorder: p.borderFocused,
+    // VS Code has no `input.focusBorder`: a focused text box (search, find, SCM
+    // commit message, settings) redraws its `input.border` in `focusBorder`. Zed's
+    // `border.focused` (#303a36) reads as a dark blue flash against the grey border,
+    // so this deliberately reuses `border` — focus leaves an input's frame unchanged.
+    focusBorder: p.border,
     "widget.border": p.border,
     "widget.shadow": alpha(p.editorBg, 0.4),
     "selection.background": alpha(p.brightBlue, 0.24),
@@ -689,6 +693,17 @@ export const zedGruvboxDark: ColorTheme = {
         "meta.object-literal.key",
       ],
       settings: { foreground: p.editorFg },
+    },
+    {
+      // VS Code's ini grammar scopes config keys as `keyword.other.definition.ini`,
+      // so `.conf`, `.properties` and `gitconfig` keys are already red. The dotenv
+      // grammar scopes them `variable.key.dotenv` instead, which falls through to
+      // the rule above and leaves the whole line one flat colour — unquoted values
+      // are `property.value.dotenv`, a scope nothing themes, so they stay at
+      // `editor.foreground` on purpose.
+      name: "Dotenv key — aligned with ini `keyword.other.definition`",
+      scope: ["variable.key.dotenv"],
+      settings: { foreground: p.syntaxRed },
     },
     {
       name: "Attribute — Zed `attribute`",

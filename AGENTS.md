@@ -79,9 +79,9 @@ selector.
 
 ## Zed Gruvbox Dark token source
 
-The upstream reference lives outside this repo:
+The upstream reference is Zed's built-in Gruvbox theme:
 
-`/Users/egorzekov/dev/other/zed/assets/themes/gruvbox/gruvbox.json`
+https://github.com/zed-industries/zed/blob/main/assets/themes/gruvbox/gruvbox.json
 
 - The `"Gruvbox Dark"` theme begins at line 7.
 - UI tokens are under `themes[0].style`.
