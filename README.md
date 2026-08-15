@@ -14,7 +14,7 @@ Currently ships one theme: **Zed Gruvbox Dark**.
 
 This extension is not published to the marketplace yet. Install it from a local `.vsix` file:
 
-1. Download [`vscode-gruvbox-zed-inspired-theme-0.0.1.vsix`](https://github.com/egorzekov/vscode-gruvbox-zed-inspired-theme/releases) from [Releases](https://github.com/egorzekov/vscode-gruvbox-zed-inspired-theme/releases).
+1. Download [`vscode-gruvbox-zed-inspired-theme-1.0.0.vsix`](https://github.com/egorzekov/vscode-gruvbox-zed-inspired-theme/releases) from [Releases](https://github.com/egorzekov/vscode-gruvbox-zed-inspired-theme/releases).
 2. In VS Code or Cursor, open the Command Palette (<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) and run **Extensions: Install from VSIX...**
 3. Select the downloaded `.vsix` file.
 4. Reload the window, then pick **Zed Gruvbox Dark** via **Preferences: Color Theme**.
@@ -22,9 +22,9 @@ This extension is not published to the marketplace yet. Install it from a local 
 You can also install from the terminal:
 
 ```sh
-code --install-extension vscode-gruvbox-zed-inspired-theme-0.0.1.vsix
+code --install-extension vscode-gruvbox-zed-inspired-theme-1.0.0.vsix
 # or, in Cursor:
-cursor --install-extension vscode-gruvbox-zed-inspired-theme-0.0.1.vsix
+cursor --install-extension vscode-gruvbox-zed-inspired-theme-1.0.0.vsix
 ```
 
 ## Additional visual improvements
@@ -76,7 +76,7 @@ TextMate and semantic scopes under the cursor.
 
 ```sh
 pnpm package     # typechecks, builds, emits dist/*.vsix
-code --install-extension dist/vscode-gruvbox-zed-inspired-theme-0.0.1.vsix
+code --install-extension dist/vscode-gruvbox-zed-inspired-theme-1.0.0.vsix
 ```
 
 > Requires Node 24+ — the build runs `.ts` files directly via Node's native type stripping.

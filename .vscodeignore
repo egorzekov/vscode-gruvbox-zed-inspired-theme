@@ -2,6 +2,7 @@
 .zed/**
 .github/**
 node_modules/**
+.pnpm-store/**
 src/**
 AGENTS.md
 tsconfig.json
