@@ -2,8 +2,12 @@
   "name": "vscode-gruvbox-zed-inspired-theme",
   "displayName": "Zed Gruvbox",
   "description": "Gruvbox for VS Code and Cursor, inspired by the Zed editor's take on the palette.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "egorzekov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egorzekov/vscode-gruvbox-zed-inspired-theme.git"
+  },
   "license": "MIT",
   "author": "Egor Zekov",
   "private": true,
