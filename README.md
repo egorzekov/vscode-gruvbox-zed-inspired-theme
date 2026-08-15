@@ -2,7 +2,7 @@
 
 <img src="assets/icon.png" width="128" height="128" alt="Zed Gruvbox icon">
 
-Gruvbox for VS Code, inspired by the [Zed](https://zed.dev) editor's take on the palette.
+Gruvbox for VS Code and Cursor, inspired by the [Zed](https://zed.dev) editor's take on the palette.
 
 Big shoutout to the Zed designers for creating the best dark theme ever.
 
@@ -10,22 +10,52 @@ Currently ships one theme: **Zed Gruvbox Dark**.
 
 ![Zed Gruvbox Dark](assets/theme-example.png)
 
-## How it works
+## How to install
 
-Theme JSON is generated, not hand-edited. Colors live in TypeScript so variants can share a
-single palette:
+This extension is not published to the marketplace yet. Install it from a local `.vsix` file:
 
+1. Download [`vscode-gruvbox-zed-inspired-theme-0.0.1.vsix`](https://github.com/egorzekov/vscode-gruvbox-zed-inspired-theme/releases) from [Releases](https://github.com/egorzekov/vscode-gruvbox-zed-inspired-theme/releases).
+2. In VS Code or Cursor, open the Command Palette (<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) and run **Extensions: Install from VSIX...**
+3. Select the downloaded `.vsix` file.
+4. Reload the window, then pick **Zed Gruvbox Dark** via **Preferences: Color Theme**.
+
+You can also install from the terminal:
+
+```sh
+code --install-extension vscode-gruvbox-zed-inspired-theme-0.0.1.vsix
+# or, in Cursor:
+cursor --install-extension vscode-gruvbox-zed-inspired-theme-0.0.1.vsix
 ```
-src/palette.ts                  # gruvbox colors + alpha() helper
-src/types.ts                    # ColorTheme typings
-src/themes/zed-gruvbox-dark.ts  # workbench colors + token rules
-src/themes/index.ts             # registry of themes to emit
-src/build.ts                    # writes themes/*.json
-themes/                         # generated output (git-ignored)
-dist/                           # packaged .vsix (git-ignored)
+
+## Additional visual improvements
+
+A few extras that pair well with the theme.
+
+### Lilex
+
+Install the [Lilex](https://github.com/mishamyrt/Lilex) monospace font with Homebrew:
+
+```sh
+brew install --cask font-lilex font-lilex-nerd-font
 ```
 
-The build fails if `src/themes/index.ts` and `contributes.themes` in `package.json` disagree.
+Then add something like this to your `settings.json`:
+
+```json
+{
+  "editor.fontFamily": "Lilex, monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.618,
+  "terminal.integrated.fontFamily": "'Lilex Nerd Font Mono', monospace",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontLigatures.enabled": true
+}
+```
+
+### Material Icon Theme
+
+Install [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) for file icons in the explorer. In the Extensions view, search for **Material Icon Theme** by Philipp Kief.
 
 ## Development
 
